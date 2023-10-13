@@ -5,7 +5,7 @@ import { REVIEW_ADD_FAIL, REVIEW_ADD_SUCESS,REVIEW_GET_SUCCESS } from '../types/
 export const addReview =(data)=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.post('http://localhost:8080/user/addreview',data);
+            let response = await axios.post('https://bookstore-backend-u02r.onrender.com/user/addreview',data);
             dispatch({
                 type:REVIEW_ADD_SUCESS,
                 payload:{
@@ -28,7 +28,7 @@ export const addReview =(data)=>{
 export const getAllReview = (data)=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.get(`http://localhost:8080/user/get-all-review/${data}`)
+            let response = await axios.get(`https://bookstore-backend-u02r.onrender.com/user/get-all-review/${data}`)
             dispatch({
                 type:REVIEW_GET_SUCCESS,
                 payload:{

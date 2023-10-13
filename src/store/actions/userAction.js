@@ -7,7 +7,7 @@ import{USER_CREATE_SUCCESS,USER_CREATE_FAIL,USER_CREATE_SUCCESS_CLEAR,
 export const userCreate = (data)=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.post('http://localhost:8080/user/register',data)
+            let response = await axios.post('https://bookstore-backend-u02r.onrender.com/user/register',data)
             console.log(response.data.message)
             dispatch({
                 type: USER_CREATE_SUCCESS,
@@ -32,7 +32,7 @@ export const userCreate = (data)=>{
 export const userGet = (data)=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.post('http://localhost:8080/user/login',data)
+            let response = await axios.post('https://bookstore-backend-u02r.onrender.com/user/login',data)
             console.log(response.data.message)
             dispatch({
                 type: USER_GET_SUCCESS,

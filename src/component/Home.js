@@ -160,7 +160,7 @@ export default function Home() {
 
                     {loginToggle &&
                         <div className="container">
-                            <button type="button" onClick={()=>setBookToggle(!bookToggle)} class="btn btn-primary" style={{ marginTop: '3%' }}>{bookToggle?'close':'Add new Book'}</button>
+                            <button type="button" onClick={()=>setBookToggle(!bookToggle)} class="btn btn-primary" style={{ marginTop: '3%' }}>{bookToggle?'close':'Add New Book'}</button>
                         </div>}
                     <div className="container">
 

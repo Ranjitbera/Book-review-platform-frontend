@@ -85,7 +85,7 @@ useEffect(()=>{
           <div className="book-rating">
             <span className="rating">Rating : {singleBook.overallRating}</span>
           </div>
-{isAuthenticate && <button className="btn btn-primary btn-block" onClick={()=>setFeedbackOpen(true)} style={{marginTop:'3%',marginBottom:'1%'}}>Add New Review</button>}
+{isAuthenticate && <button className="btn btn-primary btn-block" onClick={()=>setFeedbackOpen(!feedbackOpen)} style={{marginTop:'3%',marginBottom:'1%'}}>{feedbackOpen?'Close':'Add New Review'}</button>}
     {feedbackOpen && <div className="container">
       <div className="row justify-content-center">
         <div className="col-md-6">

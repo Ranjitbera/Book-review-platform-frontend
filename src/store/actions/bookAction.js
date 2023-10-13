@@ -4,7 +4,7 @@ import axios from 'axios'
 export const bookAdd = (data)=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.post('http://localhost:8080/user/addbook',data)
+            let response = await axios.post('https://bookstore-backend-u02r.onrender.com/user/addbook',data)
             dispatch({
                 type:BOOK_ADD_SUCCESS,
                 payload:{
@@ -28,7 +28,7 @@ export const bookAdd = (data)=>{
 export const getBooks = ()=>{
     return async(dispatch)=>{
         try{
-            let response = await axios.get('http://localhost:8080/user/getbooks')
+            let response = await axios.get('https://bookstore-backend-u02r.onrender.com/user/getbooks')
             dispatch({
                 type:BOOK_GET_SUCCESS,
                 payload:{
@@ -44,7 +44,7 @@ export const getBooks = ()=>{
 export const getSingleBook = (data) =>{
     return async(dispatch)=>{
         try{
-            let response = await axios.get(`http://localhost:8080/user/get-single-book/${data}`)
+            let response = await axios.get(`https://bookstore-backend-u02r.onrender.com/user/get-single-book/${data}`)
             dispatch({
                 type:GET_SINGLE_BOOK,
                 payload:{
@@ -60,7 +60,7 @@ export const getSingleBook = (data) =>{
 export const getSuggestedBook = () =>{
     return async(dispatch)=>{
         try{
-            let response = await axios.get(`http://localhost:8080/user/get-suggested-book`)
+            let response = await axios.get(`https://bookstore-backend-u02r.onrender.com/user/get-suggested-book`)
             dispatch({
                 type:GET_SUGGESTED_BOOK,
                 payload:{
