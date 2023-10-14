@@ -20,7 +20,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   dispatch(getAllReview(id))
-},[])
+},[reviewSuccessMessage])
 
 console.log('432432323',allReview)
 
@@ -36,7 +36,7 @@ useEffect(()=>{
       dispatch({type:REVIEW_ADD_SUCESS_CLEAR})
     }).then(()=>{
       setFeedbackOpen(false)
-      window.location.reload()
+      // window.location.reload()
     })
   }
   if(reviewErrorMessage){
